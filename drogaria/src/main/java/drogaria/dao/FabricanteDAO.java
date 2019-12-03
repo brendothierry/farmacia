@@ -1,6 +1,6 @@
 package drogaria.dao;
 
-import drogaria.domain.Fabricante;
+import drogaria.entity.Fabricante;
 
 public class FabricanteDAO extends GenericDAO<Fabricante>{
 

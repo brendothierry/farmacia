@@ -1,6 +1,6 @@
 package drogaria.dao;
 
-import drogaria.domain.Estado;
+import drogaria.entity.Estado;
 
 public class EstadoDAO extends GenericDAO<Estado>{
 

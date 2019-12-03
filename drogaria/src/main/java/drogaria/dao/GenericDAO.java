@@ -28,6 +28,7 @@ public class GenericDAO<Entidade> {
 			sessao.save(entidade);
 			transacao.commit();
 		}catch(RuntimeException erro){
+			System.out.println(erro);
 			if(transacao != null) {
 				transacao.rollback();
 			}
@@ -53,7 +54,7 @@ public class GenericDAO<Entidade> {
 	
 
 	@SuppressWarnings("unchecked")
-	public Entidade buscar(Long codigo) {
+	public  Entidade buscar(Integer codigo) {
 		Session sessao = HibernateUtil.getSessionFactory().openSession();
 		try {
 			Criteria consulta = sessao.createCriteria(classe);
@@ -74,6 +75,25 @@ public class GenericDAO<Entidade> {
 		try {
 			transacao = sessao.beginTransaction();
 			sessao.delete(entidade);
+			transacao.commit();
+		} catch (RuntimeException erro) {
+			if (transacao != null) {
+				transacao.rollback();
+			}
+			throw erro;
+		} finally {
+			sessao.close();
+		}
+
+	}
+	
+	public void update(Entidade entidade) {
+		Session sessao = HibernateUtil.getSessionFactory().openSession();
+		Transaction transacao = null;
+
+		try {
+			transacao = sessao.beginTransaction();
+			sessao.update(entidade);
 			transacao.commit();
 		} catch (RuntimeException erro) {
 			if (transacao != null) {

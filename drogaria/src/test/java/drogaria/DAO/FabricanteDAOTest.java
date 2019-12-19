@@ -7,8 +7,8 @@ import org.junit.Test;
 
 import drogaria.dao.EstadoDAO;
 import drogaria.dao.FabricanteDAO;
-import drogaria.entity.Estado;
-import drogaria.entity.Fabricante;
+import drogaria.domain.Estado;
+import drogaria.domain.Fabricante;
 
 public class FabricanteDAOTest {
 		@Ignore

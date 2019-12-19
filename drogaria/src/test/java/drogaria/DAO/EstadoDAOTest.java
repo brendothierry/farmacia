@@ -6,7 +6,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 import drogaria.dao.EstadoDAO;
-import drogaria.entity.Estado;
+import drogaria.domain.Estado;
 
 public class EstadoDAOTest {
 	@Ignore

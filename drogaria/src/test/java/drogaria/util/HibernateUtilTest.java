@@ -1,4 +1,4 @@
-package drogaria.util;
+ package drogaria.util;
 
 import org.hibernate.Session;
 import org.junit.Test;

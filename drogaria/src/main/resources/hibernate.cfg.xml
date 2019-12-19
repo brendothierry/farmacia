@@ -30,16 +30,16 @@
 		<property name="hbm2ddl.auto">validate</property>
 
 		<!-- Mapeamento das entidades -->
-		<mapping class="drogaria.entity.Cidade" />
-		<mapping class="drogaria.entity.Cliente" />
-		<mapping class="drogaria.entity.Estado" />
-		<mapping class="drogaria.entity.Fabricante" />
-		<mapping class="drogaria.entity.Funcionario" />
-		<mapping class="drogaria.entity.ItemVenda" />
-		<mapping class="drogaria.entity.Produto" />
-		<mapping class="drogaria.entity.Pessoa" />
-		<mapping class="drogaria.entity.Usuario" />
-		<mapping class="drogaria.entity.Venda" />
+		<mapping class="drogaria.domain.Cidade" />
+		<mapping class="drogaria.domain.Cliente" />
+		<mapping class="drogaria.domain.Estado" />
+		<mapping class="drogaria.domain.Fabricante" />
+		<mapping class="drogaria.domain.Funcionario" />
+		<mapping class="drogaria.domain.ItemVenda" />
+		<mapping class="drogaria.domain.Produto" />
+		<mapping class="drogaria.domain.Pessoa" />
+		<mapping class="drogaria.domain.Usuario" />
+		<mapping class="drogaria.domain.Venda" />
 
 	</session-factory>
 </hibernate-configuration>

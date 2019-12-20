@@ -18,9 +18,8 @@ public class CidadeDAOTest {
 		EstadoDAO estadoDAO = new EstadoDAO();
 				
 		Estado estado = estadoDAO.buscar(1);
-		
-		
 		Cidade cidade = new Cidade();
+		cidade.setCodigo(11L);
 		cidade.setNome("Santos");
 		cidade.setEstado(estado);
 		
@@ -28,23 +27,18 @@ public class CidadeDAOTest {
 		cidadeDAO.salvar(cidade);
 		}
 	
-	@Ignore
 	@Test
 	public void listar() {
 		CidadeDAO cidadeDAO = new CidadeDAO();
 		List<Cidade> resultado = cidadeDAO.listar();
 		
 		for (Cidade cidade : resultado) {
-			System.out.println("Código :" + cidade.getCodigo());
-			System.out.println("Nome :" + cidade.getNome());
-			System.out.println("Estado :" + cidade.getEstado().getCodigo());
+			System.out.println("Código da Cidade:" + cidade.getCodigo());
+			System.out.println("Nome da Cidade:" + cidade.getNome());
+			System.out.println("Código do Estado :" + cidade.getEstado().getCodigo());
 			System.out.println("Sigla do Estado :" + cidade.getEstado().getSigla());
 			System.out.println("Nome do Estado :" + cidade.getEstado().getNome());
-			
-			
 		}
-		
 	}
-
 }
-//teste para commit novo
+	

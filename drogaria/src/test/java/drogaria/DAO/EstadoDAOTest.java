@@ -9,10 +9,11 @@ import drogaria.dao.EstadoDAO;
 import drogaria.domain.Estado;
 
 public class EstadoDAOTest {
-	@Ignore
+
 	@Test
 	public void salvar() {
 		Estado estado = new Estado();
+		estado.setCodigo(2L);
 		estado.setNome("Rio de Janeiro");
 		estado.setSigla("RJ");
 

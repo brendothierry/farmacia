@@ -12,13 +12,13 @@ import drogaria.domain.Estado;
 
 public class CidadeDAOTest {
 	
-	
+	@Ignore
 	@Test
 	public void salvar() {
 		EstadoDAO estadoDAO = new EstadoDAO();
 				
 		Estado estado = estadoDAO.buscar(1);
-		Cidade cidade = new Cidade();
+		Cidade cidade = new Cidade(); 	
 		cidade.setCodigo(11L);
 		cidade.setNome("Santos");
 		cidade.setEstado(estado);
@@ -27,6 +27,7 @@ public class CidadeDAOTest {
 		cidadeDAO.salvar(cidade);
 		}
 	
+	@Ignore
 	@Test
 	public void listar() {
 		CidadeDAO cidadeDAO = new CidadeDAO();
@@ -39,6 +40,14 @@ public class CidadeDAOTest {
 			System.out.println("Sigla do Estado :" + cidade.getEstado().getSigla());
 			System.out.println("Nome do Estado :" + cidade.getEstado().getNome());
 		}
+	}
+	
+	@Test
+	public void buscar	(){
+		Long codigo = 3L;
+		
+		CidadeDAO cidadeDAO = new CidadeDAO();
+		Cidade cidade = cidadeDAO.buscar(codigo);
 	}
 }
 	

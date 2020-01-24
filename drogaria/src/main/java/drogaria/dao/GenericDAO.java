@@ -42,6 +42,7 @@ public class GenericDAO<Entidade> {
 		Session sessao = HibernateUtil.getSessionFactory().openSession();
 		try {
 			Criteria consulta = sessao.createCriteria(classe);
+			@SuppressWarnings("unchecked")
 			List<Entidade> resultado = consulta.list();
 			return resultado;
 		}catch(RuntimeException erro) {

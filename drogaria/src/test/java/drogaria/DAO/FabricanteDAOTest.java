@@ -5,21 +5,20 @@ import java.util.List;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import drogaria.dao.EstadoDAO;
 import drogaria.dao.FabricanteDAO;
-import drogaria.domain.Estado;
 import drogaria.domain.Fabricante;
 
 public class FabricanteDAOTest {
-		@Ignore
+		
 		@Test
 		public void salvar() {
 			Fabricante fabricante = new Fabricante();
-			fabricante.setDescricao("Medley");
+			fabricante.setDescricao("xx1");
 			
 
 			FabricanteDAO fabricanteDAO = new FabricanteDAO();
 			fabricanteDAO.salvar(fabricante);
+			System.out.println("Fabricante cadastrado com sucesso");
 		}
 		@Ignore
 		@Test
